@@ -54,22 +54,20 @@ There's also the following key-bindings (tweak Default.sublime-keymaps to change
       |alt+d,alt+o|Run the Clang static analyzer on the current project|
       |alt+d,alt+f|Toggle whether fast (but possibly inaccurate) completions are used or not|
 
+
+
 === Global Configure / Project Configure ===
-- See Preferences -> Package Settings -> SublimeClang -> Default to see all options. You could set one or more options in User Setting file to override default values. (Global Configuration)  
-- Also could set options for one project, this is my simple project file.  
+# See Preferences -> Package Settings -> SublimeClang -> Default to see all options. You could set one or more options in User Setting file to override default values. (Global Configuration) 
+# Also could set options for one project  
 All options in default configuration file can override in project file, just add prefix "sublimeclang_" for the option.  
-Tips: you may want to set  "sublimeclang_enable_fast_completions": false   for a C++ project, otherwise completion may not work well.  
-  
-  
-```
+# Tips: you may want to set  "sublimeclang_enable_fast_completions": false   for a C++ project, otherwise completion may not work well.  
+# This is a sample project:
+{{{
     {
         "folders":
         [
             {
-                "path": "/home/julee/Documents/code/amba_stream"
-            },
-            {
-                "path": "/home/julee/Documents/code/amba_stream_host"
+                "path": "/home/julee/Documents/code/amb"
             }
         ],
         "settings":
@@ -87,7 +85,8 @@ Tips: you may want to set  "sublimeclang_enable_fast_completions": false   for a
             ]
         }
     }
-```
+}}}
+
 
 
 
