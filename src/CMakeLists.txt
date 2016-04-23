@@ -120,11 +120,11 @@ set(COPY_TARGET "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libclang${LIBSUFFIX}${CMAKE_S
 if(BUILD_LIBCLANG)
     if(NOT EXISTS ${PROJECT_BINARY_DIR}/llvm.tar.xz)
         message("Downloading llvm...")
-        file(DOWNLOAD http://www.llvm.org/releases/${CLANG_VERSION}/llvm-${CLANG_VERSION}.src.tar.xz ${PROJECT_BINARY_DIR}/llvm.tar.xz)
+        file(DOWNLOAD http://www.llvm.org/releases/${CLANG_VERSION}/llvm-${CLANG_VERSION}.src.tar.xz ${PROJECT_BINARY_DIR}/llvm.tar.xz SHOW_PROGRESS)
     endif()
     if(NOT EXISTS ${PROJECT_BINARY_DIR}/cfe.tar.xz)
         message("Downloading clang...")
-        file(DOWNLOAD http://www.llvm.org/releases/${CLANG_VERSION}/cfe-${CLANG_VERSION}.src.tar.xz ${PROJECT_BINARY_DIR}/cfe.tar.xz)
+        file(DOWNLOAD http://www.llvm.org/releases/${CLANG_VERSION}/cfe-${CLANG_VERSION}.src.tar.xz ${PROJECT_BINARY_DIR}/cfe.tar.xz SHOW_PROGRESS)
     endif()
 
     if(NOT EXISTS ${PROJECT_BINARY_DIR}/llvm)
