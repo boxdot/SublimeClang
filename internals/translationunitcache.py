@@ -29,7 +29,7 @@ from .common import Worker, complete_path, expand_path, get_setting, get_path_se
                     display_user_selection, get_cpu_count, status_message, bencode, bdecode,\
                     sencode, sdecode, are_we_there_yet, look_for_file
 from .clang import cindex
-from .parsehelp.parsehelp import *
+from .parsehelp import *
 
 try:
     import Queue

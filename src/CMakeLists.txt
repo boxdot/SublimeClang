@@ -21,7 +21,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 endif()
 
 if(NOT CMAKE_OSX_ARCHITECTURES AND NOT CMAKE_CROSS_COMPILING)
-    set(CMAKE_OSX_ARCHITECTURES i386 x86_64 CACHE STRING "Change architecture for a smaller build" FORCE)
+    # set(CMAKE_OSX_ARCHITECTURES x86_64 CACHE STRING "Change architecture for a smaller build" FORCE)
 endif()
 IF(NOT CMAKE_BUILD_TYPE)
     SET(CMAKE_BUILD_TYPE Release CACHE STRING
@@ -85,12 +85,13 @@ if(NOT DEFINED WIN_RELEASE)
     target_link_libraries(
         ${TARGETLIB}
         ${CX11LIBS}
-        ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libclang.so
+        ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libclang.dylib
     )
 
     include(CheckFunctionExists)
     set(CMAKE_REQUIRED_FLAGS "-isysroot / -L\"${CMAKE_LIBRARY_OUTPUT_DIRECTORY}\" -L/usr/local/lib -L/usr/lib")
-    set(CMAKE_REQUIRED_LIBRARIES clang LLVM-${CLANG_VERSION})
+    # set(CMAKE_REQUIRED_LIBRARIES clang LLVM-${CLANG_VERSION})
+    set(CMAKE_REQUIRED_LIBRARIES clang)
     check_function_exists(clang_getExpansionLocation HAS_RIGHT_CLANG)
     if(NOT HAS_RIGHT_CLANG)
         # Try again, but this time without LLVM-${CLANG_VERSION}

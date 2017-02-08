@@ -490,7 +490,7 @@ static double _Complex
 
 static long double _Complex
     _TG_ATTRS
-    __tg_pow(long double _Complex __x, long double _Complex __y) 
+    __tg_pow(long double _Complex __x, long double _Complex __y)
     {return cpowl(__x, __y);}
 
 #undef pow
@@ -1340,15 +1340,15 @@ static long double _Complex
 
 // creal
 
-static float _Complex
+static float
     _TG_ATTRS
     __tg_creal(float __x) {return __x;}
 
-static double _Complex
+static double
     _TG_ATTRS
     __tg_creal(double __x) {return __x;}
 
-static long double _Complex
+static long double
     _TG_ATTRS
     __tg_creal(long double __x) {return __x;}
 

@@ -146,7 +146,7 @@
     "additional_language_options":
     {
         // For example, you can use "c++": ["-std=c++11"] to enable C++11 features.
-        "c++" : [],
+        "c++" : ["-std=c++11"],
         "c": [],
         "objc": [],
         "objc++": []
@@ -268,19 +268,28 @@
     // For help getting up and running with MinGW see https://github.com/quarnster/SublimeClang/issues/122
     // For help getting up and running with the AVR toolchain see https://github.com/quarnster/SublimeClang/issues/134
     // For help getting up and running with iOS development see https://github.com/quarnster/SublimeClang/issues/52
+    // "options":
+    // [
+    //     "-isystem", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/",
+    //     "-isystem", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/c++/4.2.1",
+    //     "-F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/",
+    //     "-Wno-deprecated-declarations",
+    //     "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include",
+    //     "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include\\c++",
+    //     "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include\\c++\\mingw32",
+    //     "-isystem", "C:\\MinGW\\include",
+    //     "-isystem", "/usr/include",
+    //     "-isystem", "/usr/include/c++/*",
+    //     "-Wall"
+    // ],
     "options":
     [
-        "-isystem", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/",
-        "-isystem", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/c++/4.2.1",
-        "-F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/",
-        "-Wno-deprecated-declarations",
-        "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include",
-        "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include\\c++",
-        "-isystem", "C:\\MinGW\\lib\\gcc\\mingw32\\4.7.0\\include\\c++\\mingw32",
-        "-isystem", "C:\\MinGW\\include",
-        "-isystem", "/usr/include",
-        "-isystem", "/usr/include/c++/*",
-        "-Wall"
+        "-std=c++11",
+        "-stdlib=libc++",
+        "-isystem", "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+        "-isystem", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+        "-F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/",
+        "-Wall",
     ],
 
     // A command that can be run to fetch actual options for a source file in a build system.
