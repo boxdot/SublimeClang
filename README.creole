@@ -1,9 +1,8 @@
-= Fork of quarnster/SublimeClang: Porting it to clang 3.8.0, Make it stable on Ubuntu 15.04, Ubuntu 15.10, Ubuntu 16.04 =
+= Fork of quarnster/SublimeClang
 
-** From: https://github.com/quarnster/SublimeClang
-
-=== Support Sublime Text 3 / Sublime Text 2 ===
-
+* Ported to clang 3.9.1
+* Works on MacOS Sierra / Sublime Text 3
+* From https://github.com/quarnster/SublimeClang
 
 === Description ===
 Clang plugin for Sublime Text 2 / Sublime Text 3 providing auto complete suggestions for C/C++/ObjC/ObjC++. It'll also optionally parse the code as it's typed and show errors and warnings.
