@@ -5,32 +5,10 @@
 * From https://github.com/quarnster/SublimeClang
 
 === Description ===
-Clang plugin for Sublime Text 2 / Sublime Text 3 providing auto complete suggestions for C/C++/ObjC/ObjC++. It'll also optionally parse the code as it's typed and show errors and warnings.
-
-=== Known issues and feature requests ===
-Please go [[https://github.com/quarnster/SublimeClang/issues?sort=created&direction=desc&state=open|here]] to see the currently known issues and feature request, or to file a new.
-
-=== Prerequisites ===
-  # This Ported Version Only Build And Test On Ubuntu Only
-
-=== Additional Prerequisites (Sublime Text 2 on Linux Only. Sublime Text 3 Doesn't Need)===
-  # [[http://sublimetext.userecho.com/topic/85126-ctypes-cant-be-imported-in-linux/|ctypes can't be imported]] in the Linux version of Sublime Text 2 right now. This can however be worked around easily with the help of pythonbrew:
-  ## curl -kL http://xrl.us/pythonbrewinstall | bash
-  ## source "$HOME/.pythonbrew/etc/bashrc"
-  ## pythonbrew install --configure="--enable-unicode=ucs4" 2.6
-  ## ln -s $HOME/.pythonbrew/pythons/Python-2.6/lib/python2.6/ <your Sublime Text 2 folder>/lib/python2.6
-  
-  
+Clang plugin for Sublime Text 2 / Sublime Text 3 providing auto complete suggestions for C/C++/ObjC/ObjC++. It'll also optionally parse the code as it's typed and show errors and warnings.  
 
 === Installation ===
-    # sudo apt-get build-dep clang llvm  
-    # cd ~/.config/sublime-text-3/Packages (if sublime text 2: cd ~/.config/sublime-text-2/Packages)  
-    # git clone https://github.com/julee/SublimeClang  
-    # mkdir SublimeClang/src/build  
-    # cd SublimeClang/src/build  
-    # cmake .. (NOTE: Will download clang and llvm source packages from llvm.org.)  
-    # make -j8  
-    # After building completes, start sublime, with shortcut Ctrl+` to see whether plugin SublimeClang thows exception or not. If no error, it works well now.
+  TODO (Update)
 
 === Usage ===
 After installation, suggestions from clang should be provided when triggering the autocomplete operation in Sublime Text 2/ Sublime Text 3. By default it'll inhibit the Sublime Text 2/ Sublime Text 3 built in word completion, but the inhibition can be disabled by setting the configuration option "inhibit_sublime_completions" to false.
@@ -75,12 +53,8 @@ All options in default configuration file can override in project file, just add
             "sublimeclang_options":
             [
                 "-Wall",
-                "-I",
-                "/usr/include/x86_64-linux-gnu/c++/5",
-                "-I",
-                "/home/julee/Documents/code/Git_Ambarella/ambalink/host.oem/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/",
-                "-I",
-                "${project_path:include}"
+                "-I/usr/include/x86_64-linux-gnu/c++/5",
+                "-I${project_path:include}"
             ]
         }
     }
@@ -165,4 +139,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
 SOFTWARE.
 }}}
-

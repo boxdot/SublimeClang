@@ -18,7 +18,7 @@
 
     // Whether or not to automatically trigger the auto complete
     // window when typing object., object-> or similar.
-    "automatic_completion_popup": true,
+    "automatic_completion_popup": false,
 
     // Number of worker threads to create. If set to -1 it'll create
     // one thread per cpu
@@ -32,7 +32,7 @@
     // user settings) it will not be enabled. In other words
     // this setting, when set to false, overrides whatever the
     // keyboard toggle is set to.
-    "enable_fast_completions": true,
+    "enable_fast_completions": false,
 
     // Delay in ms until recompiling the file after the buffer is modified
     // Set to 0 to disable.
@@ -45,7 +45,7 @@
     // Whether or not to automatically show the output panel.
     // If set to false, the default key-binding alt+d,alt+p
     // will show it
-    "show_output_panel": true,
+    "show_output_panel": false,
 
     // When set to true, the output panel will be updated with the active
     // view's errors/warnings as it is switched to. If set to false you will
@@ -93,7 +93,7 @@
 
     // If set to true will remove the file from the cache when
     // it is closed
-    "remove_on_close": true,
+    "remove_on_close": false,
 
     // If set to true will pop the file from the navigation stack
     // (automatic alt+d,alt+b) when the file is closed
@@ -101,7 +101,7 @@
 
     // When set to true a reparse command will be triggered
     // when a view is activated
-    "reparse_on_activated": true,
+    "reparse_on_activated": false,
 
     // When set to true a reparse command will be triggered
     // when a view is saved
